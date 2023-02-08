@@ -1,3 +1,5 @@
+//jshint esversion:6
+
 // var express = require('express')
 // var app = express()
 
@@ -13,20 +15,39 @@
 
 // })
 
+
 const express = require('express');
 const app = express();
 const bodyParser = require('body-parser');
 const { Client } = require('pg');
+const dotenv = require('dotenv');
+
+dotenv.config();
+// require('dotenv').config();
+
+
 
 // app.use(bodyParser.json());
 
+// const client = new Client({
+//     host: 'room-reservation-qa.cxvqfpt4mc2y.us-east-1.rds.amazonaws.com',
+//     port: 5432,
+//     user: 'hr',
+//     password: 'hr',
+//     database: 'hr'
+// });
+
 const client = new Client({
-    host: 'room-reservation-qa.cxvqfpt4mc2y.us-east-1.rds.amazonaws.com',
-    port: 5432,
-    user: 'hr',
-    password: 'hr',
-    database: 'hr'
+  host : process.env.DB_HOST,
+  port : process.env.DB_PORT,
+  user : process.env.DB_USER,
+  password : process.env.DB_PASSWORD,
+  database : process.env.DB_NAME,
+
 });
+
+// const connectionString = `postgresql://${user}:${password}@${host}:${port}/${database}`;
+// const client = new Client(connectionString);
 
 app.use(express.urlencoded({ extended: false }));
 
