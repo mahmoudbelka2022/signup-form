@@ -29,13 +29,7 @@ dotenv.config();
 
 // app.use(bodyParser.json());
 
-// const client = new Client({
-//     host: 'room-reservation-qa.cxvqfpt4mc2y.us-east-1.rds.amazonaws.com',
-//     port: 5432,
-//     user: 'hr',
-//     password: 'hr',
-//     database: 'hr'
-// });
+
 
 const client = new Client({
   host : process.env.DB_HOST,
