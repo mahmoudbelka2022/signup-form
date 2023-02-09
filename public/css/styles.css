@@ -23,5 +23,36 @@
     background-color: #3e8e41;
   }
 
+  /* Features Section */
+#features{
+  background-color: #fff;
+  position: relative;
+  text-align: center;
+  top: 50%;
+  left: 13%;
+  
+  
+}
+
+.feature-title{
+ font-size: 1.5rem;
+
+}
+
+.feature-box{
+ padding: 4.5%;
+
+ 
+}
+.icon{
+ color: #4e9531;
+ 
+ 
+}
+.icon:hover{
+ color: #8f7c12;
+}
+  
+
 
   
