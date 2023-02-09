@@ -44,6 +44,7 @@ const client = new Client({
 // const client = new Client(connectionString);
 
 app.use(express.urlencoded({ extended: false }));
+app.use(express.static('public'));
 
 // client.connect();
 
@@ -78,7 +79,10 @@ app.get("/", (req, res) => {
                 console.error("query error", err.stack);
                 res.send("Error retrieving data from database");
               } else {
-                res.send("Data inserted successfully: " + JSON.stringify(result.rows));
+                //res.send("Data inserted successfully: " + JSON.stringify(result.rows));
+                console.log("Data inserted successfully");
+                res.redirect('/success.html');
+                
               }
               client.end();
             });
