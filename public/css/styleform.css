@@ -1,0 +1,45 @@
+/*body{
+    height: 100vh;
+} */
+
+h2{
+    font-family: "Ubuntu";
+    text-align: center;
+    padding: 3%;
+    background-color: #e9dfc7;
+  }
+  
+  .form-group{
+    font-family: "Ubuntu";
+    font-size: 1.5rem;
+    line-height: 1.5;
+    text-align: left;
+  }
+  
+  
+  /*.back {
+    background: #e2e2e2;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+  }*/
+  
+  .container{
+  font-family: "Ubuntu";
+  font-size: 16px;
+  position: relative;
+  background: rgba(240, 248, 255, 0.5);
+  width: 600px;
+  /*margin-top: 40%;*/
+  margin-bottom: auto;
+  margin: 0 auto;
+  width: 65%;
+  
+  
+  }
+  
+  /* .panel-footer{
+  
+  } */
+  
